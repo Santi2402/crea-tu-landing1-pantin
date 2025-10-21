@@ -52,3 +52,35 @@ Además, se implementaron estilos personalizados con la paleta de colores de la 
 1️⃣ Clonar el repositorio:
 ```bash
 git clone https://github.com/Santi2402/crea-tu-landing1-pantin.git
+
+2️⃣ Instalar dependencias:
+```bash
+npm install
+
+3️⃣ Ejecutar el proyecto:
+```bash
+npm run dev
+
+Luego abrir en el navegador:
+👉 http://localhost:5173/
+
+---
+
+## 🧑‍💻 Autor
+
+Santiago Pantín
+LinkedIn 👉  https://www.linkedin.com/in/santiago-pant%C3%ADn-7075711a4/
+
+Curso: React JS – CoderHouse (2025)
+
+---
+
+## ✅ Cómo subirlo
+
+1. Guardá este contenido en tu archivo `README.md`.  
+2. En la terminal de VS Code, ejecutá:
+
+```bash
+git add README.md
+git commit -m "Agrega README final del proyecto Vela Vita"
+git push
