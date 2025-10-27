@@ -1,0 +1,12 @@
+# dependencias
+node_modules
+
+# build de producción
+dist
+
+# caché de vite
+.vite
+
+# sistema operativo
+.DS_Store
+Thumbs.db
