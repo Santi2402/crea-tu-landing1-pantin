@@ -1,3 +1,4 @@
+// src/data/products.js
 export const PRODUCTS = [
   {
     id: "arc-01",
@@ -5,8 +6,8 @@ export const PRODUCTS = [
     price: 420,
     stock: 12,
     category: "arcos",
-    description: "Vela de soja estilo arco, mecha de algodón.",
-    image: "/src/assets/vela-01.jpg"
+    image: "/src/assets/vela-01.jpg",
+    description: "Vela de soja estilo arco, mecha de algodón."
   },
   {
     id: "geo-01",
@@ -14,8 +15,8 @@ export const PRODUCTS = [
     price: 390,
     stock: 10,
     category: "geometricas",
-    description: "Vela geométrica, aroma vainilla suave.",
-    image: "/src/assets/vela-02.jpg"
+    image: "/src/assets/vela-03.jpg", 
+    description: "Vela geométrica, aroma vainilla suave."
   },
   {
     id: "cla-01",
@@ -23,7 +24,7 @@ export const PRODUCTS = [
     price: 680,
     stock: 8,
     category: "clasicas",
-    description: "Cera vegetal en copa de vidrio con pétalos secos.",
-    image: "/src/assets/vela-03.jpg"
-  },
+    image: "/src/assets/vela-02.jpg", 
+    description: "Cera vegetal en copa de vidrio con pétalos secos."
+  }
 ];

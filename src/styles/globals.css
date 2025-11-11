@@ -148,7 +148,7 @@ h3 {
 
 /* Hero */
 .hero {
-    background: linear-gradient(180deg, var(--vv-200) 0%, var(--vv-white) 55%); 
+    background: linear-gradient(180deg, var(--vv-200) 0%, var(--vv-white) 55%);
     border: 1px solid var(--line);
     border-radius: 16px;
     padding: 24px;
