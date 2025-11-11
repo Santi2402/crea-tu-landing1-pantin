@@ -1,25 +1,35 @@
-import vela1 from "../assets/vela-01.jpg";
-import vela2 from "../assets/vela-02.jpg";
-import vela3 from "../assets/vela-03.jpg";
+import React from "react";
+import { useParams } from "react-router-dom";
+import { getProducts } from "../services/products";
+import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting }) => {
-    return (
-        <section id="catalogo" className="section container">
-            <div className="card">
-                <h2>{greeting}</h2>
-                <p style={{ marginBottom: 12 }}>
-                    Muy pronto encontrarás aquí nuestro catálogo de velas de soja, blends exclusivos y ediciones limitadas.
-                </p>
+  const { categoryId } = useParams();
+  const [items, setItems] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
 
-                {/* Galería visual de 3 productos (placeholder, no funcional) */}
-                <div className="grid" style={{ marginTop: 12 }}>
-                    <img src={vela1} alt="Vela Vela Vita - estilo arco" />
-                    <img src={vela2} alt="Vela Vela Vita - poliedro" />
-                    <img src={vela3} alt="Vela Vela Vita - copa con tapa" />
-                </div>
-            </div>
-        </section>
-    );
+  React.useEffect(() => {
+    setLoading(true); setError(null);
+    getProducts(categoryId)
+      .then(setItems)
+      .catch(setError)
+      .finally(() => setLoading(false));
+  }, [categoryId]);
+
+  return (
+    <section id="catalogo" className="section container">
+      <div className="card" style={{marginBottom:16}}>
+        <h2>{greeting}</h2>
+        <p style={{marginBottom:0}}>Filtra por categoría desde el menú.</p>
+      </div>
+
+      {loading && <p>Cargando productos…</p>}
+      {error && <p style={{color:"crimson"}}>Error: {error.message}</p>}
+      {!loading && !error && <ItemList items={items} />}
+    </section>
+  );
 };
 
 export default ItemListContainer;
+
