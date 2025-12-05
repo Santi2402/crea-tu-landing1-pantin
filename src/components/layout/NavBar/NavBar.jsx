@@ -5,6 +5,8 @@ import logo from "../../../assets/VelaVita-Logo.svg";
 const CATEGORIES = [
   { id: "decorativas", label: "Decorativas" },
   { id: "premium", label: "Premium" },
+  { id: "minimalistas", label: "Minimalistas" },
+  { id: "navidad", label: "Navidad" }
 ];
 
 const NavBar = () => {
@@ -12,7 +14,7 @@ const NavBar = () => {
     textDecoration: "none",
     fontWeight: isActive ? 700 : 500,
     borderBottom: isActive ? "2px solid var(--vv-ink)" : "2px solid transparent",
-    paddingBottom: 2,
+    paddingBottom: 2
   });
 
   return (

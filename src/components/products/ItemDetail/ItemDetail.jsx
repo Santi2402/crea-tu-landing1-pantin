@@ -20,9 +20,10 @@ const ItemDetail = ({ product }) => {
           alt={product.title}
           className="product-detail__img"
         />
+
         <div className="product-detail__body">
           <h1>{product.title}</h1>
-          <p className="product-detail__price">${product.price}</p>
+          <p className="product-detail__price">UYU {product.price}.00</p>
           <p>{product.description}</p>
           <p className="product-detail__stock">
             {product.stock > 0
@@ -33,7 +34,9 @@ const ItemDetail = ({ product }) => {
           {product.stock === 0 && <p>Producto sin stock.</p>}
 
           {product.stock > 0 && !added && (
-            <ItemCount stock={product.stock} initial={1} onAdd={handleAdd} />
+            <div className="product-detail__actions">
+              <ItemCount stock={product.stock} initial={1} onAdd={handleAdd} />
+            </div>
           )}
 
           {added && (
