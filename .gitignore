@@ -10,3 +10,6 @@ dist
 # sistema operativo
 .DS_Store
 Thumbs.db
+
+# environment variables
+.env
